@@ -14,7 +14,7 @@ const Projects = () => {
       color: 'from-purple-500 to-blue-500',
     },
     {
-      title: 'Topic Modeling',
+      title: 'Topic Modeling - MIMIC-III',
       description: 'Discovered 8 distinct clinical themes from 2M+ clinical notes using LDA. Achieved 0.5625 coherence score, exceeding clinical text benchmarks.',
       impact: 'Healthcare NLP • MLflow tracking • pyLDAvis visualization',
       technologies: ['Topic Modeling', 'MIMIC-III', 'LDA', 'spaCy', 'MLflow'],
