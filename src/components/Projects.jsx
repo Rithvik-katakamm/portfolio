@@ -6,7 +6,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'PubMed RAG - Medical Research Assistant',
+      title: 'Retrieval Augmented Generation - PubMed',
       description: 'Real-time medical research assistant using GPT-4 and PubMed integration. Achieves sub-100ms retrieval on 10000+ abstracts with ChromaDB vector search.',
       impact: '2-second response time • BioBERT embeddings • Production-ready',
       technologies: ['LLM', 'RAG', 'ChromaDB', 'BioBERT', 'FastAPI', 'GPT-4'],
@@ -14,7 +14,7 @@ const Projects = () => {
       color: 'from-purple-500 to-blue-500',
     },
     {
-      title: 'Clinical Topic Modeling - MIMIC-III',
+      title: 'Topic Modeling',
       description: 'Discovered 8 distinct clinical themes from 2M+ clinical notes using LDA. Achieved 0.5625 coherence score, exceeding clinical text benchmarks.',
       impact: 'Healthcare NLP • MLflow tracking • pyLDAvis visualization',
       technologies: ['Topic Modeling', 'MIMIC-III', 'LDA', 'spaCy', 'MLflow'],
@@ -22,7 +22,7 @@ const Projects = () => {
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Clinical NER Pipeline',
+      title: 'Named Entity Recognition',
       description: 'Automated medical entity extraction from clinical notes. Reduced manual review by 70% using fine-tuned ClinicalBERT.',
       impact: '2M+ notes processed • Optuna optimization • MLflow tracking',
       technologies: ['ClinicalBERT', 'NER', 'MIMIC-III', 'Optuna', 'spaCy'],
@@ -30,20 +30,12 @@ const Projects = () => {
       color: 'from-cyan-500 to-teal-500',
     },
     {
-      title: 'Intelligent Email Summarizer',
+      title: 'AI for Emails',
       description: 'Privacy-first email automation with local Llama 3.2 and structured outputs. Instant iMessage alerts for high-priority items.',
       impact: '100% local processing • Pydantic models • macOS integration',
       technologies: ['Llama', 'Ollama', 'Structured Outputs'],
       github: 'https://github.com/Rithvik-katakamm/Email-Summerizer-using-Llama',
       color: 'from-teal-500 to-green-500',
-    },
-    {
-      title: 'RFM Customer Intelligence',
-      description: 'Segmented e-commerce customers using K-means clustering. Identified 500+ VIP customers and saved 15% of at-risk segments.',
-      impact: 'Business analytics • Actionable insights • Real-time scoring API',
-      technologies: ['K-means', 'RFM Analysis', 'Scikit-learn', 'PCA', 'Python'],
-      github: 'https://github.com/Rithvik-katakamm/RFM-analysis-',
-      color: 'from-green-500 to-purple-500',
     },
   ]
 
