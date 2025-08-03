@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Smooth scrolling with momentum for iOS */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    @apply bg-dark-bg text-dark-text;
+    /* Optimize scrolling performance */
+    will-change: scroll-position;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  /* Smooth scroll for all browsers */
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  /* Prevent layout shift from scrollbar */
+  @media screen and (min-width: 768px) {
+    html {
+      margin-right: calc(-1 * (100vw - 100%));
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent-purple rounded-full;
+    transition: background-color 0.3s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-hover;
+  }
+  
+  /* Mobile scrollbar - thinner */
+  @media (max-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  }
+  
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-purple to-accent-purple-light bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-border {
+    background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-lg bg-dark-card/50 border border-dark-border;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.3)];
+  }
+  
+  /* Mobile-optimized hover glow */
+  @media (max-width: 768px) {
+    .hover-glow {
+      @apply hover:shadow-[0_0_20px_rgba(99,102,241,0.2)];
+    }
+  }
+  
+  /* Smooth transitions for all interactive elements */
+  .smooth-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  /* Optimize for smooth scrolling */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Performance optimizations */
+@layer components {
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Optimize image rendering */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Mobile tap highlight removal */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
