@@ -4,22 +4,14 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     /* Smooth scrolling with momentum for iOS */
     -webkit-overflow-scrolling: touch;
   }
   
   body {
     @apply bg-dark-bg text-dark-text;
-    /* Optimize scrolling performance */
-    will-change: scroll-position;
     /* Prevent horizontal scroll on mobile */
     overflow-x: hidden;
-  }
-  
-  /* Smooth scroll for all browsers */
-  * {
-    scroll-behavior: smooth;
   }
   
   /* Prevent layout shift from scrollbar */
@@ -105,9 +97,7 @@
 /* Performance optimizations */
 @layer components {
   .gpu-accelerated {
-    transform: translateZ(0);
-    will-change: transform;
-    -webkit-transform: translateZ(0);
+    /* Simplified GPU acceleration - only for animations */
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }

@@ -9,33 +9,14 @@ import Contact from './components/Contact'
 
 function App() {
   useEffect(() => {
-    // Enable smooth scrolling behavior
+    // Simple smooth scrolling without conflicts
     document.documentElement.style.scrollBehavior = 'smooth'
-    
-    // Optimize scrolling performance
-    let ticking = false
-    function updateScrolling() {
-      ticking = false
-    }
-    
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateScrolling)
-        ticking = true
-      }
-    }
-    
-    window.addEventListener('scroll', requestTick)
-    
-    return () => {
-      window.removeEventListener('scroll', requestTick)
-    }
   }, [])
 
   return (
-    <div className="min-h-screen bg-dark-bg scroll-smooth">
+    <div className="min-h-screen bg-dark-bg">
       <Navbar />
-      <main className="gpu-accelerated">
+      <main>
         <Hero />
         <Projects />
         <Experience />
