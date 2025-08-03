@@ -1,14 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub } from 'react-icons/fa'
-import { useInView } from 'react-intersection-observer'
 
 const Projects = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-    rootMargin: '-50px 0px',
-  })
 
   const projects = [
     {
@@ -53,51 +47,19 @@ const Projects = () => {
     },
   ]
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  }
 
   return (
     <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16"
-        >
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16">
           Featured <span className="gradient-text">Projects</span>
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid gap-6 sm:gap-8"
-        >
+        <div className="grid gap-6 sm:gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              variants={itemVariants}
               className="group relative overflow-hidden rounded-xl sm:rounded-2xl glass-effect p-6 sm:p-8 hover-glow smooth-transition"
               whileHover={{ y: -5 }}
             >
@@ -140,7 +102,7 @@ const Projects = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -19,18 +19,10 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Text Content - Order 2 on mobile, Order 1 on desktop */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="order-2 md:order-1 text-center md:text-left"
-        >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-            Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span>
+        <div className="order-2 md:order-1 text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8">
+            Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span><span className="blinking-cursor"></span>
           </h2>
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark-muted mb-4 sm:mb-6">
-            NLP/LLM Data Scientist
-          </h3>
           <p className="text-sm sm:text-base md:text-lg text-dark-muted mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
                          I like building AI that helps people. 
           </p>
@@ -45,23 +37,16 @@ const Hero = () => {
                 className="p-2.5 sm:p-3 rounded-lg border border-dark-border hover:border-accent-purple hover:bg-accent-purple/10 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
+
               >
                 <link.icon className="w-5 h-5 sm:w-6 sm:h-6" />
               </motion.a>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Image - Order 1 on mobile, Order 2 on desktop */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="order-1 md:order-2 flex justify-center md:justify-end"
-        >
+        <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]">
             {/* Modern clean image presentation like Aditi's */}
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
@@ -80,7 +65,7 @@ const Hero = () => {
             <div className="absolute -top-2 -right-2 w-16 h-16 sm:w-20 sm:h-20 bg-accent-purple/15 rounded-2xl filter blur-2xl" />
             <div className="absolute -bottom-2 -left-2 w-20 h-20 sm:w-24 sm:h-24 bg-accent-purple-light/15 rounded-2xl filter blur-2xl" />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
