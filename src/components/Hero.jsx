@@ -32,7 +32,7 @@ const Hero = () => {
             NLP/LLM Data Scientist
           </h3>
           <p className="text-sm sm:text-base md:text-lg text-dark-muted mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-            I like builing AI that helps people. 
+                         I like building AI that helps people. 
           </p>
           
           <div className="flex gap-4 justify-center md:justify-start">
@@ -66,7 +66,7 @@ const Hero = () => {
             {/* Modern clean image presentation like Aditi's */}
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/IMG_0495.png"
+                src="IMG_0495.png"
                 alt="Rithvik Katakam"
                 className="w-full h-full object-cover object-center"
                 loading="eager"
