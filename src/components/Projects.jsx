@@ -14,6 +14,14 @@ const Projects = () => {
       color: 'from-purple-500 to-blue-500',
     },
     {
+      title: 'AI for Emails',
+      description: 'Privacy-first email automation with local Llama 3.2 and structured outputs.',
+      impact: '100% local processing • Pydantic models • Structured Output ',
+      technologies: ['Llama', 'Ollama', 'Structured Outputs'],
+      github: 'https://github.com/Rithvik-katakamm/Email-Summerizer-using-Llama',
+      color: 'from-teal-500 to-green-500',
+    },
+    {
       title: 'Topic Modeling - MIMIC-III',
       description: 'Discovered 8 distinct clinical themes from 2M+ clinical notes using LDA. Achieved 0.5625 coherence score, exceeding clinical text benchmarks.',
       impact: 'Healthcare NLP • MLflow tracking • pyLDAvis visualization',
@@ -28,14 +36,6 @@ const Projects = () => {
       technologies: ['ClinicalBERT', 'NER', 'MIMIC-III', 'Optuna', 'spaCy'],
       github: 'https://github.com/Rithvik-katakamm/Fine-Tuned-Named-Entity-Recognition',
       color: 'from-cyan-500 to-teal-500',
-    },
-    {
-      title: 'AI for Emails',
-      description: 'Privacy-first email automation with local Llama 3.2 and structured outputs. Instant iMessage alerts for high-priority items.',
-      impact: '100% local processing • Pydantic models • macOS integration',
-      technologies: ['Llama', 'Ollama', 'Structured Outputs'],
-      github: 'https://github.com/Rithvik-katakamm/Email-Summerizer-using-Llama',
-      color: 'from-teal-500 to-green-500',
     },
   ]
 
