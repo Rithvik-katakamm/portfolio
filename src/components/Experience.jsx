@@ -10,7 +10,7 @@ const Experience = () => {
       period: 'July 2024 - Dec 2024',
       highlights: [
         'Prototyped LLM system (Llama 3.1 8B) to fill in 97% of missing data.',
-        'Built an ML model to identify bottlenecks and reduce latency by 110%.',
+        'Built an ML model to identify bottlenecks - projects ran 110% faster for customers',
         'NLP to cluster clients - helped teams personalize renewal conversations'
       ],
     },

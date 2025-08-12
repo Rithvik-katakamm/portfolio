@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import SEO from './components/SEO'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
@@ -15,6 +16,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark-bg">
+      <SEO
+        title="Rithvik Katakam"
+        description="I like AI and engineering"
+        image="/Portfolio-picture.jpeg"
+        type="website"
+        twitterHandle="@"
+      />
       <Navbar />
       <main>
         <Hero />
