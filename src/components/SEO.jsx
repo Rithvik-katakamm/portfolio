@@ -10,7 +10,7 @@ function normalizeImagePath(imagePath) {
 }
 
 const SEO = ({
-  title = 'Portfolio',
+  title = "Rithvik Katakam's Portfolio",
   description = 'Personal portfolio site.',
   image = '/Portfolio-picture.jpeg',
   url,
