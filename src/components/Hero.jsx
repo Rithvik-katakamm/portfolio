@@ -24,7 +24,7 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span><span className="blinking-cursor"></span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-dark-muted mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                         I love AI and engineering. 
+                         I like AI and engineering. 
           </p>
           
           <div className="flex gap-4 justify-center md:justify-start">
