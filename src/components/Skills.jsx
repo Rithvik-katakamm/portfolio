@@ -6,7 +6,11 @@ const Skills = () => {
   const skillCategories = [
     {
       title: 'Core',
-      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'SQL', 'Git', 'Python', 'Pytorch'],
+      skills: ['Machine Learning', 'Deep Learning', 'NLP', 'C++', 'Git', 'Python', 'Pytorch'],
+    },
+    {
+      title: 'LLM Engineering',
+      skills: ['RAG', 'Prompt Engineering', 'Fine-tuning', 'Vector Databases', 'ChromaDB', 'Structured Outputs', 'GPT-4', 'Llama', 'Faiss','MCP','Ollama'],
     },
     {
       title: 'Frameworks',
@@ -15,15 +19,7 @@ const Skills = () => {
     {
       title: 'MLOps & Cloud',
       skills: ['Docker', 'Kubernetes', 'CI/CD', 'Model Deployment', 'REST API', 'SageMaker', 'Data Pipeline', 'ETL', 'MongoDB'],
-    },
-    {
-      title: 'Healthcare NLP',
-      skills: ['ClinicalBERT', 'BioBERT', 'MIMIC-III', 'EHR Processing', 'Medical Terminology', 'HIPAA Compliance', 'ICD-10'],
-    },
-    {
-      title: 'LLM Engineering',
-      skills: ['RAG', 'Prompt Engineering', 'Fine-tuning', 'Vector Databases', 'ChromaDB', 'Structured Outputs', 'GPT-4', 'Llama', 'Faiss','MCP','Ollama'],
-    },
+    }
   ]
 
 

@@ -13,15 +13,6 @@ const Experience = () => {
         'Built an ML model to identify bottlenecks - projects ran 110% faster for customers',
         'NLP to cluster clients - helped teams personalize renewal conversations'
       ],
-    },
-    {
-      company: 'Bliss PG (Family Business)',
-      position: 'Co-Founder/Data Scientist',
-      period: 'April 2021 - September 2023',
-      highlights: [
-        'Engineered data pipeline from scratch and caught a 7% leak',
-        'Launched data-driven campaign, increased revenue by 31% in under 21 days'
-      ],
     }
   ]
 
