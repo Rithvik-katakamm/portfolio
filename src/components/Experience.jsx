@@ -5,6 +5,15 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: 'Bliss (Family Business)',
+      position: 'Growth Hacker',
+      period: 'Jun 2025 - Present',
+      highlights: [
+        "Identified that word-of-mouth drove 80% of new tenant acquisition through customer behavior analysis – discovered untapped referral opportunity in organic peer recommendations",
+        "Designed and launched referral program with 10:1 ROI – increased revenue 31% in 21 days"
+      ],
+    },
+    {
       company: 'Norstella',
       position: 'Data Science Intern',
       period: 'July 2024 - Dec 2024',
