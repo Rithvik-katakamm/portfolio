@@ -5,6 +5,11 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: "Amazon",
+      position: "AI Content Expert 2",
+      period: "TBD"
+    },
+    {
       company: 'Bliss (Family Business)',
       position: 'Growth Hacker',
       period: 'Jun 2025 - Present',
