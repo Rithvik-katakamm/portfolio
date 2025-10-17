@@ -59,8 +59,9 @@ const Experience = () => {
                     <span className="text-sm sm:text-base text-dark-muted">{experience.period}</span>
                   </div>
 
-                  <ul className="space-y-3">
-                    {experience.highlights.map((highlight, highlightIndex) => (
+                  {experience.highlights && experience.highlights.length > 0 && (
+                    <ul className="space-y-3">
+                      {experience.highlights.map((highlight, highlightIndex) => (
                       <li
                         key={highlightIndex}
                         className="flex items-start"
@@ -68,8 +69,9 @@ const Experience = () => {
                         <span className="text-accent-purple mr-2 sm:mr-3 mt-0.5 flex-shrink-0">▸</span>
                         <span className="text-sm sm:text-base text-dark-muted leading-relaxed">{highlight}</span>
                       </li>
-                    ))}
-                  </ul>
+                      ))}
+                    </ul>
+                  )}
                 </motion.div>
               </div>
             ))}
