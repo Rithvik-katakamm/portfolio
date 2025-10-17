@@ -51,7 +51,7 @@ const Hero = () => {
             {/* Modern clean image presentation like Aditi's */}
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/IMG_0495.png"
+                src="IMG_0495.png"
                 alt="Rithvik Katakam"
                 className="w-full h-full object-cover object-center"
                 loading="eager"
