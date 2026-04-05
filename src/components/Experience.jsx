@@ -6,13 +6,14 @@ const Experience = () => {
   const experiences = [
     {
       company: "Amazon",
-      position: "AI Content Expert 2",
-      period: "TBD"
+      position: "Agentic AI Teacher",
+      period: "December 2025 - Present",
+      highlights: ['Curating the best data to improve agentic ai for everyone']
     },
     {
       company: 'Bliss (Family Business)',
       position: 'Growth Hacker',
-      period: 'Jun 2025 - Present',
+      period: 'Jun 2025 - December 2025',
       highlights: [
         "Identified that word-of-mouth drove 80% of new tenant acquisition through customer behavior analysis – discovered untapped referral opportunity in organic peer recommendations",
         "Designed and launched referral program with 10:1 ROI – increased revenue 31% in 21 days"
