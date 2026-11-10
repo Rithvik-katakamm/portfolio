@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Job Market Pipeline',
     description: 'Collects jobs from 51 hiring platforms and classifies every role with an embedding model.',
-    impact: '335k+ postings • 850 titles/s on CPU',
+    impact: '335k+ postings • Role classifier macro-F1 0.39 → 0.86 • 850 titles/s on CPU',
     technologies: ['Python', 'Embeddings', 'OpenTelemetry'],
     github: null,
     color: 'from-purple-500 to-blue-500',
@@ -29,8 +29,8 @@ const projects = [
   },
   {
     title: 'Day Log',
-    description: 'A macOS time log my agents read over MCP. The local LLM behind it was picked by eval, not by feel.',
-    impact: '84% vs 51% for keyword rules • Ships on every green push',
+    description: 'A macOS time log: type what you are doing in plain English and a local LLM turns it into a timed entry. My agents read it over MCP.',
+    impact: 'LLM reads entries right 84% of the time vs 51% for keyword rules • Ships on every green push',
     technologies: ['Swift', 'FastAPI', 'MCP', 'Ollama'],
     github: 'https://github.com/Rithvik-katakamm/daylog',
     color: 'from-cyan-500 to-teal-500',

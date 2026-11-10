@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaCalendarAlt, FaCopy, FaCheck, FaLinkedin, FaGithub } from 'react-icons/fa'
-import { BOOKING_URL, bookingHref, EMAIL, GITHUB, LINKEDIN } from '../config'
+import { BOOKING_URL, EMAIL, GITHUB, LINKEDIN } from '../config'
 
 const pill =
   'inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-dark-border hover:border-accent-purple hover:bg-accent-purple/10 text-sm sm:text-base transition-all duration-300'
@@ -29,14 +29,16 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-3">
-          <a
-            href={bookingHref}
-            target={BOOKING_URL ? '_blank' : undefined}
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-accent-purple text-white font-semibold hover:bg-accent-hover text-sm sm:text-base transition-colors duration-300"
-          >
-            <FaCalendarAlt className="w-4 h-4" /> Book a call
-          </a>
+          {BOOKING_URL && (
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-accent-purple text-white font-semibold hover:bg-accent-hover text-sm sm:text-base transition-colors duration-300"
+            >
+              <FaCalendarAlt className="w-4 h-4" /> Book a call
+            </a>
+          )}
           <button type="button" onClick={copyEmail} className={pill}>
             {copied ? <FaCheck className="w-4 h-4 text-accent-purple" /> : <FaCopy className="w-4 h-4" />}
             {copied ? 'Copied' : 'Copy email'}
