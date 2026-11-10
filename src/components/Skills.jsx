@@ -2,7 +2,7 @@ import React from 'react'
 
 // Kept short on purpose: only what the work above proves.
 const skillRows = [
-  { title: 'Agents & LLMs', skills: ['Claude Code', 'MCP', 'Agent evaluation', 'RAG', 'Fine-tuning'] },
+  { title: 'Agents & LLMs', skills: ['Claude Code', 'Codex', 'MCP', 'Agent evaluation', 'RAG', 'Fine-tuning'] },
   { title: 'Engineering', skills: ['Python', 'TypeScript', 'React / Next.js', 'FastAPI', 'Postgres', 'SQLite'] },
   { title: 'ML & Ops', skills: ['PyTorch', 'Transformers', 'scikit-learn', 'OpenTelemetry', 'CI/CD'] },
 ]

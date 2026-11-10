@@ -5,37 +5,33 @@ import { FaGithub } from 'react-icons/fa'
 const projects = [
   {
     title: 'Lab Booking',
-    description:
-      'Instrument booking for a Northeastern University research lab. Built database-first: transactional Postgres functions lock and reject atomically, so double-booking cannot happen, even under parallel load.',
-    impact: 'Production in 10 days • 8-way race + 160-request load tests • 15 audit findings closed before go-live',
-    technologies: ['Next.js', 'TypeScript', 'Supabase Postgres', 'Row-level security', 'Playwright'],
+    description: 'Instrument booking for a Northeastern University lab. Double-booking is impossible at the database level.',
+    impact: 'Production in 10 days • Race- and load-tested',
+    technologies: ['Next.js', 'Postgres', 'Supabase'],
     github: null,
     color: 'from-teal-500 to-green-500',
   },
   {
-    title: 'Job Market Pipeline + Role Classifier',
-    description:
-      'Collects job postings from 51 hiring platforms and classifies each role with an embedding model. Benchmarked about 14 approaches on 2,098 hand-labeled titles and picked the winner by the numbers.',
-    impact: '335k+ postings • Macro-F1 0.39 → 0.86 over keyword rules • 850 titles/s on CPU',
-    technologies: ['Python', 'bge embeddings', 'scikit-learn', 'SQLite', 'OpenTelemetry'],
+    title: 'Job Market Pipeline',
+    description: 'Collects jobs from 51 hiring platforms and classifies every role with an embedding model.',
+    impact: '335k+ postings • 850 titles/s on CPU',
+    technologies: ['Python', 'Embeddings', 'OpenTelemetry'],
     github: null,
     color: 'from-purple-500 to-blue-500',
   },
   {
     title: 'The Brain',
-    description:
-      'A personal data lake and agent OS. Every AI conversation, meeting and note is captured deterministically into one index any agent can search. Mined memories must cite a real source turn: no source, no memory, enforced in code.',
-    impact: '110k conversation turns indexed • 22 health invariants • Citation gate in code',
-    technologies: ['Claude Code', 'MCP', 'Node', 'SQLite FTS5', 'Cloudflare R2'],
+    description: 'Every AI conversation, meeting and note in one index my agents can search. No source, no memory.',
+    impact: '110k turns indexed • Citation gate enforced in code',
+    technologies: ['Claude Code', 'MCP', 'SQLite FTS5'],
     github: null,
     color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'Day Log',
-    description:
-      'A keyboard-first macOS time log with an MCP server, so my agents know what I am doing. Append-only event store; the local LLM that reads each line was chosen by an eval on real inputs.',
-    impact: 'Local LLM 84% vs 51% for keyword rules • 129 tests • Every green push ships',
-    technologies: ['Swift', 'FastAPI', 'MCP', 'Ollama', 'OpenTelemetry'],
+    description: 'A macOS time log my agents read over MCP. The local LLM behind it was picked by eval, not by feel.',
+    impact: '84% vs 51% for keyword rules • Ships on every green push',
+    technologies: ['Swift', 'FastAPI', 'MCP', 'Ollama'],
     github: 'https://github.com/Rithvik-katakamm/daylog',
     color: 'from-cyan-500 to-teal-500',
   },

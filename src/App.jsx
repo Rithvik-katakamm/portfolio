@@ -18,7 +18,7 @@ function App() {
     <div className="min-h-screen bg-dark-bg">
       <SEO
         title="Rithvik Katakam"
-        description="Applied AI engineer in Boston. I build AI agents and the software around them, and ship them to real users."
+        description="Applied AI engineer in Boston. I build AI agents and ship them to real users."
         image="/Portfolio-picture.jpeg"
         type="website"
         twitterHandle="@"

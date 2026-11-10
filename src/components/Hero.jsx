@@ -25,10 +25,10 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span><span className="blinking-cursor"></span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-dark-text mb-3 leading-relaxed max-w-xl mx-auto md:mx-0">
-            I build AI agents and the software around them, and ship them to real users.
+            I build AI agents and ship them to real users.
           </p>
           <p className="text-sm sm:text-base text-dark-muted mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0">
-            Applied AI engineer · Agentic AI Teacher at Amazon AGI · Boston
+            Applied AI · Forward-deployed engineering · Amazon AGI
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center">
