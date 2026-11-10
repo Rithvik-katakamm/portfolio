@@ -25,7 +25,7 @@ const Hero = () => {
             Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span><span className="blinking-cursor"></span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-dark-text mb-3 leading-relaxed max-w-xl mx-auto md:mx-0">
-            From messy problem to working MVP, fast.
+            AI agents build. I ideate, experiment and verify.
           </p>
           <p className="text-sm sm:text-base text-dark-muted mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0">
             Agentic AI at Amazon AGI · Boston
