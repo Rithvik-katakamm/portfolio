@@ -2,45 +2,52 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub } from 'react-icons/fa'
 
+const projects = [
+  {
+    title: 'Lab Booking',
+    description:
+      'Instrument booking for a Northeastern University research lab. Built database-first: transactional Postgres functions lock and reject atomically, so double-booking cannot happen, even under parallel load.',
+    impact: 'Production in 10 days • 8-way race + 160-request load tests • 15 audit findings closed before go-live',
+    technologies: ['Next.js', 'TypeScript', 'Supabase Postgres', 'Row-level security', 'Playwright'],
+    github: null,
+    color: 'from-teal-500 to-green-500',
+  },
+  {
+    title: 'Job Market Pipeline + Role Classifier',
+    description:
+      'Collects job postings from 51 hiring platforms and classifies each role with an embedding model. Benchmarked about 14 approaches on 2,098 hand-labeled titles and picked the winner by the numbers.',
+    impact: '335k+ postings • Macro-F1 0.39 → 0.86 over keyword rules • 850 titles/s on CPU',
+    technologies: ['Python', 'bge embeddings', 'scikit-learn', 'SQLite', 'OpenTelemetry'],
+    github: null,
+    color: 'from-purple-500 to-blue-500',
+  },
+  {
+    title: 'The Brain',
+    description:
+      'A personal data lake and agent OS. Every AI conversation, meeting and note is captured deterministically into one index any agent can search. Mined memories must cite a real source turn: no source, no memory, enforced in code.',
+    impact: '110k conversation turns indexed • 22 health invariants • Citation gate in code',
+    technologies: ['Claude Code', 'MCP', 'Node', 'SQLite FTS5', 'Cloudflare R2'],
+    github: null,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: 'Day Log',
+    description:
+      'A keyboard-first macOS time log with an MCP server, so my agents know what I am doing. Append-only event store; the local LLM that reads each line was chosen by an eval on real inputs.',
+    impact: 'Local LLM 84% vs 51% for keyword rules • 129 tests • Every green push ships',
+    technologies: ['Swift', 'FastAPI', 'MCP', 'Ollama', 'OpenTelemetry'],
+    github: 'https://github.com/Rithvik-katakamm/daylog',
+    color: 'from-cyan-500 to-teal-500',
+  },
+]
+
+const earlierWork = [
+  { title: 'PubMed RAG', href: 'https://github.com/Rithvik-katakamm/PubMedRAG' },
+  { title: 'ClinicalBERT NER', href: 'https://github.com/Rithvik-katakamm/Fine-Tuned-Named-Entity-Recognition' },
+  { title: 'Topic Modeling on MIMIC-III', href: 'https://github.com/Rithvik-katakamm/Topic-Modeling-LDA-MIMIC-III-' },
+]
+
 const Projects = () => {
-
-  const projects = [
-    {
-      title: 'Retrieval Augmented Generation - PubMed',
-      description: 'Real-time medical research assistant using GPT-4 and PubMed integration. Achieves sub-100ms retrieval on 10000+ abstracts with ChromaDB vector search.',
-      impact: '2-second response time • BioBERT embeddings • Production-ready',
-      technologies: ['LLM', 'RAG', 'ChromaDB', 'BioBERT', 'FastAPI', 'GPT-4'],
-      github: 'https://github.com/Rithvik-katakamm/PubMedRAG',
-      color: 'from-purple-500 to-blue-500',
-    },
-    {
-      title: 'AI for Emails',
-      description: 'Privacy-first email automation with local Llama 3.2 and structured outputs.',
-      impact: '100% local processing • Pydantic models • Structured Output ',
-      technologies: ['Llama', 'Ollama', 'Structured Outputs'],
-      github: 'https://github.com/Rithvik-katakamm/Email-Summerizer-using-Llama',
-      color: 'from-teal-500 to-green-500',
-    },
-    {
-      title: 'Topic Modeling - MIMIC-III',
-      description: 'Discovered 8 distinct clinical themes from 2M+ clinical notes using LDA. Achieved 0.5625 coherence score, exceeding clinical text benchmarks.',
-      impact: 'Healthcare NLP • MLflow tracking • pyLDAvis visualization',
-      technologies: ['Topic Modeling', 'MIMIC-III', 'LDA', 'spaCy', 'MLflow'],
-      github: 'https://github.com/Rithvik-katakamm/Topic-Modeling-LDA-MIMIC-III-',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'Named Entity Recognition',
-      description: 'Automated medical entity extraction from clinical notes. Reduced manual review by 70% using fine-tuned ClinicalBERT.',
-      impact: '2M+ notes processed • Optuna optimization • MLflow tracking',
-      technologies: ['ClinicalBERT', 'NER', 'MIMIC-III', 'Optuna', 'spaCy'],
-      github: 'https://github.com/Rithvik-katakamm/Fine-Tuned-Named-Entity-Recognition',
-      color: 'from-cyan-500 to-teal-500',
-    },
-  ]
-
-
-
   return (
     <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
@@ -48,29 +55,31 @@ const Projects = () => {
           Featured <span className="gradient-text">Projects</span>
         </h2>
 
-        <div className="grid gap-6 sm:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project) => (
             <motion.div
               key={project.title}
               className="group relative overflow-hidden rounded-xl sm:rounded-2xl glass-effect p-6 sm:p-8 hover-glow smooth-transition"
               whileHover={{ y: -5 }}
             >
-              {/* Gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`} />
-              
-              <div className="relative z-10">
+
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-4 gap-4">
                   <h3 className="text-xl sm:text-2xl font-bold text-dark-text group-hover:text-accent-purple transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-lg hover:bg-accent-purple/20 transition-colors duration-300 flex-shrink-0"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} on GitHub`}
+                      className="p-2 rounded-lg hover:bg-accent-purple/20 transition-colors duration-300 flex-shrink-0"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                  )}
                 </div>
 
                 <p className="text-sm sm:text-base text-dark-muted mb-4 leading-relaxed">
@@ -81,7 +90,7 @@ const Projects = () => {
                   {project.impact}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
@@ -95,6 +104,23 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-sm sm:text-base text-dark-muted">
+          Earlier ML work:{' '}
+          {earlierWork.map((w, i) => (
+            <React.Fragment key={w.title}>
+              {i > 0 && ' · '}
+              <a
+                href={w.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-dark-text hover:text-accent-purple underline underline-offset-4 decoration-dark-border hover:decoration-accent-purple transition-colors duration-300"
+              >
+                {w.title}
+              </a>
+            </React.Fragment>
+          ))}
+        </p>
       </div>
     </section>
   )

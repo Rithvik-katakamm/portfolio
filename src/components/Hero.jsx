@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { BOOKING_URL, bookingHref, EMAIL, GITHUB, LINKEDIN } from '../config'
 
 const Hero = () => {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/Rithvik-katakamm', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com/in/rithvikkatakam/', label: 'LinkedIn' },
-    { icon: FaEnvelope, href: 'mailto:rithvik.katakamm@gmail.com', label: 'Email' },
+    { icon: FaGithub, href: GITHUB, label: 'GitHub' },
+    { icon: FaLinkedin, href: LINKEDIN, label: 'LinkedIn' },
+    { icon: FaEnvelope, href: `mailto:${EMAIL}`, label: 'Email' },
   ]
 
   return (
@@ -23,14 +24,28 @@ const Hero = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8">
             Hi, I'm <span className="gradient-text whitespace-nowrap">Rithvik</span><span className="blinking-cursor"></span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-dark-muted mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
-                         I like machine learning engineering
+          <p className="text-base sm:text-lg md:text-xl text-dark-text mb-3 leading-relaxed max-w-xl mx-auto md:mx-0">
+            I build AI agents and the software around them, and ship them to real users.
           </p>
-          
-          <div className="flex gap-4 justify-center md:justify-start">
+          <p className="text-sm sm:text-base text-dark-muted mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0">
+            Applied AI engineer · Agentic AI Teacher at Amazon AGI · Boston
+          </p>
+
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start items-center">
+            <motion.a
+              href={bookingHref}
+              target={BOOKING_URL ? '_blank' : undefined}
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-lg bg-accent-purple text-white font-semibold hover:bg-accent-hover transition-colors duration-300"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              Book a 15-min call
+            </motion.a>
             {socialLinks.map((link, index) => (
               <motion.a
                 key={link.label}
+                aria-label={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"

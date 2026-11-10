@@ -5,30 +5,36 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "Amazon",
-      position: "Agentic AI Teacher",
-      period: "December 2025 - Present",
-      highlights: ['Curating the best data to improve agentic ai for everyone']
+      company: 'Amazon · AGI Data Services',
+      position: 'Agentic AI Teacher',
+      period: 'Dec 2025 – Present',
+      highlights: [
+        'Ranked #2 worldwide among 50+ raters, evaluating 27 computer-use agent runs in a day, each 60–90 steps of reasoning, tool calls and actions: where the agent looped, stalled or picked the wrong tool',
+        'Produced training data for frontier models across 3 modalities: agent trajectories, 70+ hours of narrated vision-language-action gameplay at 99% quality, and full-duplex speech',
+        'Self-started Claude Code onboarding for 20+ co-workers, centered on verifying agent-written code; 3 went on to ship and deploy their own apps',
+        'Built Atlas, a gamified learning site for co-workers on the path to software engineering; shipped a user-requested DSA visualizer in 45 minutes',
+      ],
     },
     {
-      company: 'Bliss (Family Business)',
-      position: 'Growth Hacker',
-      period: 'Jun 2025 - December 2025',
+      company: 'Independent Software Studio · vikrith.com',
+      position: 'Engineer',
+      period: 'Jul 2026 – Present',
       highlights: [
-        "Identified that word-of-mouth drove 80% of new tenant acquisition through customer behavior analysis – discovered untapped referral opportunity in organic peer recommendations",
-        "Designed and launched referral program with 10:1 ROI – increased revenue 31% in 21 days"
+        'Built and deployed a booking platform for a Northeastern University lab in 10 days; Postgres row locks make double-booking impossible under parallel load. The lab manager green-lit rollout',
+        'Designed a white-label lane-booking engine MCP-first: tools described for an AI agent the way a good UI is for a person, so agents book and cancel cleanly',
+        "Turned a business owner's request for a custom AI agent into a zero-build fix on Claude Cowork, which he now uses",
       ],
     },
     {
       company: 'Norstella',
       position: 'Data Science Intern',
-      period: 'July 2024 - Dec 2024',
+      period: 'Jul 2024 – Dec 2024',
       highlights: [
-        'Prototyped LLM system (Llama 3.1 8B) to fill in 97% of missing data.',
-        'Built an ML model to identify bottlenecks - projects ran 110% faster for customers',
-        'NLP to cluster clients - helped teams personalize renewal conversations'
+        'Prototyped an LLM system (Llama 3.1 8B) that filled 97% of missing project data',
+        'Built an ML model to find platform bottlenecks; customer projects ran 110% faster',
+        'Used NLP to cluster clients so teams could personalize renewal conversations',
       ],
-    }
+    },
   ]
 
   return (
